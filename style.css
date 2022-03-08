@@ -1,8 +1,9 @@
 :root {
-  --text-color: #f0f4f5;
   --background-color: #263343;
-  --accent-color: #ffa000;
-  --botton-color: #80e27e;
+  --logo-color: #d4e157;
+  --text-color: #f0f4f5;
+  --hover-backgroundcolor: #7986cb;
+  --icons-color:
 }
 
 * {
@@ -11,7 +12,6 @@
 
 body {
   margin: 0;
-  font-family: 'Source Sans Pro';
 }
 
 a {
@@ -24,41 +24,40 @@ a {
   justify-content: space-between;
   align-items: center;
   background-color: var(--background-color);
-  padding-top: 8px 12px;
 }
 
 .navbar__logo {
+  padding-left: 8px;
   font-size: 24px;
-  color : var(--accent-color);
 }
 
 .navbar__logo i {
-  color : #ffa000;
+  color: var(--logo-color);
 }
 
 .navbar__menu {
-  display: flex;
   list-style: none;
+  display: flex;
   padding-left: 0;
 }
 
 .navbar__menu li {
-  padding: 8px 12px;
+  padding: 12px 24px;
 }
 
 .navbar__menu li:hover {
-  background-color: #9575cd;
-  border-radius: 4px;
-  }
+  background-color: var(--hover-backgroundcolor);
+  border-radius: 20px;
 }
 
 .navbar__icons {
   list-style: none;
-  color: white;
   display: flex;
   padding-left: 0;
 }
 
-.navbar__icons li {
-  padding: 8px 12px;
+.navbar__icons i {
+  padding: 4px 8px;
+  font-size: 20px;
+  color: var(--icons-color);
 }
