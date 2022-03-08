@@ -3,7 +3,8 @@
   --logo-color: #d4e157;
   --text-color: #f0f4f5;
   --hover-backgroundcolor: #7986cb;
-  --icons-color:
+  --icons-color: #e0e0e0;
+  --toggleBtn-color: #ffee58;
 }
 
 * {
@@ -17,6 +18,7 @@ body {
 a {
   text-decoration: none;
   color: var(--text-color);
+  font-family: 'Source Sans Pro';
 }
 
 .navbar {
@@ -24,10 +26,10 @@ a {
   justify-content: space-between;
   align-items: center;
   background-color: var(--background-color);
+  padding: 8px 12px;
 }
 
 .navbar__logo {
-  padding-left: 8px;
   font-size: 24px;
 }
 
@@ -60,4 +62,41 @@ a {
   padding: 4px 8px;
   font-size: 20px;
   color: var(--icons-color);
+}
+
+.navbar__toggleBtn {
+  display: none;
+  position: absolute;
+  right: 32px;
+  font-size: 24px;
+  color: var(--toggleBtn-color);
+}
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 24px;
+  }
+
+  .navbar__menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .navbar__menu li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar__icons {
+    display: none;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .navbar__toggleBtn {
+    display: block;
+  }
 }
